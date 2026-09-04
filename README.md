@@ -1,6 +1,6 @@
 # MediaPlayer
 
-Projekt na przedmiot **Zaawansowane aplikacje internetowe**. Jest to prosty webowy odtwarzacz filmów, który może działać jako samodzielna strona albo jako komponent osadzony na istniejącej stronie.
+Projekt na przedmiot **Nowoczesne aplikacje internetowe**. Jest to prosty webowy odtwarzacz filmów, który może działać jako samodzielna strona albo jako komponent osadzony na istniejącej stronie.
 
 ## Opis projektu
 
