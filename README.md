@@ -214,13 +214,4 @@ MediaPlayer-project/
 W katalogu `docs` znajdują się:
 
 - `Dokumentacja_MediaPlayer.pdf` - dokumentacja projektu,
-- `NAUKA_PROJEKTU.pdf` i `NAUKA_PROJEKTU.md` - materiał do przygotowania się do odpowiedzi,
 - `TESTY_MANUALNE.md` - lista testów.
-
-## Repozytorium
-
-Adres repozytorium GitHub należy uzupełnić po jego utworzeniu:
-
-```text
-TODO: https://github.com/.../MediaPlayer
-```
