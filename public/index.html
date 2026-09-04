@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediaPlayer - projekt</title>
+  <!-- Ścieżki względne są ważne: dzięki nim stronę można otworzyć także bez serwera. -->
+  <link rel="stylesheet" href="assets/css/player.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>MediaPlayer</h1>
+    <p>Webowy player z kolejką, sekcjami, komentarzami i importem/eksportem opisu.</p>
+  </header>
+
+  <main class="page-layout">
+    <aside class="control-panel">
+      <h2>Źródło filmu</h2>
+
+      <h3 id="file-mode-heading">1. Dodaj plik z dysku</h3>
+      <form id="upload-form">
+        <label for="upload-title">Tytuł (opcjonalnie)</label>
+        <input class="text-input" id="upload-title" type="text" placeholder="Np. Wykład 1">
+
+        <label for="video-file">Plik wideo</label>
+        <small>Tryb serwerowy obsługuje także AVI, MKV, DivX/Xvid, WMV, MPEG i inne formaty konwertowane przez FFmpeg.</small>
+        <input id="video-file" name="video" type="file" accept="video/*,.avi,.mkv,.divx,.xvid,.mpg,.mpeg,.wmv,.flv,.3gp,.3g2,.ts,.mts,.m2ts" required>
+        <button class="panel-button" id="upload-button" type="submit">Dodaj plik do kolejki</button>
+      </form>
+
+      <h3>2. Albo podaj URL / ścieżkę</h3>
+      <form id="url-form">
+        <label for="url-title">Tytuł</label>
+        <input class="text-input" id="url-title" type="text" placeholder="Film z hostingu">
+
+        <label for="video-url">Adres filmu</label>
+        <input class="text-input" id="video-url" type="text" placeholder="https://.../film.mp4 lub media/film.mp4" required>
+        <button class="panel-button" type="submit">Dodaj adres do kolejki</button>
+      </form>
+
+      <h3>Opis playera</h3>
+      <button class="panel-button secondary" id="export-button" type="button">Eksport JSON</button>
+      <label class="panel-button secondary" for="import-file" style="text-align:center; cursor:pointer;">Import JSON</label>
+      <input id="import-file" type="file" accept="application/json,.json" hidden>
+      <button class="panel-button secondary" id="clear-button" type="button">Wyczyść dane lokalne</button>
+
+      <div id="status" class="status">Gotowy.</div>
+
+      <div class="info-box" id="mode-info">
+        Player może działać bez serwera oraz z prostym serwerem Node.js.
+      </div>
+
+      <div class="link-row">
+        <a href="embed-demo.html">Przykład osadzenia playera na innej stronie</a>
+      </div>
+    </aside>
+
+    <section>
+      <div id="player"></div>
+    </section>
+  </main>
+
+  <script src="assets/js/media-player.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

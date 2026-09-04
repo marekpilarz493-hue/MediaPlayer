@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediaPlayer - przykład osadzenia</title>
+  <link rel="stylesheet" href="assets/css/player.css">
+  <style>
+    body { margin: 0; background: #f2f3f6; font-family: Arial, sans-serif; color: #222; }
+    main { max-width: 1100px; margin: 30px auto; padding: 0 18px; }
+    .demo-card { background: #fff; border: 1px solid #d5d8de; border-radius: 8px; padding: 18px; margin-bottom: 18px; }
+    pre { overflow-x: auto; background: #1b1d23; color: #f5f5f5; padding: 12px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="demo-card">
+      <h1>Przykładowa istniejąca strona</h1>
+      <p>Ten dokument udaje zwykłą stronę, do której dołączono komponent MediaPlayer przez CSS i JavaScript.</p>
+    </div>
+
+    <div id="embedded-player"></div>
+
+    <div class="demo-card">
+      <h2>Minimalny kod osadzenia</h2>
+      <pre>&lt;link rel="stylesheet" href="assets/css/player.css"&gt;
+&lt;div id="my-player"&gt;&lt;/div&gt;
+&lt;script src="assets/js/media-player.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  new MediaPlayer('#my-player', {
+    playlist: [
+      { title: 'Mój film', src: 'media/moj-film.mp4', sections: [] }
+    ]
+  });
+&lt;/script&gt;</pre>
+      <p>Jeżeli komponent jest osadzony w innym katalogu lub hostingu, trzeba dopasować ścieżki do plików CSS, JS i filmu.</p>
+    </div>
+  </main>
+
+  <script src="assets/js/media-player.js"></script>
+  <script>
+    new MediaPlayer('#embedded-player', {
+      playlist: [
+        {
+          title: 'Film osadzony w istniejącej stronie',
+          src: 'media/sample.mp4',
+          sections: [
+            { title: 'Wprowadzenie', start: 0, end: 3.5, comments: ['Player działa bez pliku app.js.'] },
+            { title: 'Dalsza część', start: 3.5, end: 8, comments: ['To pokazuje wersję komponentową.'] }
+          ]
+        }
+      ]
+    });
+  </script>
+</body>
+</html>

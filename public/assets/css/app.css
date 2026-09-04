@@ -1,0 +1,138 @@
+/* Style strony demonstracyjnej. Sam komponent playera ma osobny player.css. */
+
+body {
+  margin: 0;
+  background: #0e1014;
+  color: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-header {
+  padding: 22px 5vw 12px;
+}
+
+.site-header h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+}
+
+.site-header p {
+  margin: 0;
+  color: #aeb4bf;
+}
+
+.page-layout {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 18px;
+  padding: 12px 5vw 32px;
+}
+
+.control-panel {
+  border: 1px solid #343944;
+  background: #181b21;
+  border-radius: 9px;
+  padding: 15px;
+  align-self: start;
+  position: sticky;
+  top: 12px;
+}
+
+.control-panel h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.control-panel h3 {
+  margin: 18px 0 8px;
+  font-size: 14px;
+}
+
+.control-panel label {
+  display: block;
+  margin-bottom: 6px;
+  color: #c7cbd2;
+  font-size: 13px;
+}
+
+.control-panel input[type='text'],
+.control-panel input[type='url'],
+.control-panel input[type='file'] {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.text-input {
+  border: 1px solid #3a3f49;
+  background: #0f1115;
+  color: #f1f1f1;
+  border-radius: 6px;
+  padding: 9px;
+}
+
+.panel-button {
+  width: 100%;
+  border: 1px solid #3a3f49;
+  background: #292d36;
+  color: #fff;
+  padding: 9px 11px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 7px;
+}
+
+.panel-button:hover {
+  border-color: #6c8cff;
+}
+
+.panel-button.secondary {
+  background: #20242b;
+}
+
+.status {
+  min-height: 34px;
+  margin: 10px 0 0;
+  padding: 8px;
+  border-radius: 6px;
+  background: #101217;
+  color: #bdc4cf;
+  font-size: 12px;
+}
+
+.status.error {
+  color: #ffc5cc;
+  border: 1px solid #73424a;
+}
+
+.status.ok {
+  color: #c5f3d0;
+  border: 1px solid #3c6548;
+}
+
+.info-box {
+  margin-top: 14px;
+  padding: 10px;
+  border: 1px dashed #444a56;
+  color: #bfc5ce;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.link-row {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.link-row a {
+  color: #9fb2ff;
+}
+
+@media (max-width: 1000px) {
+  .page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .control-panel {
+    position: static;
+  }
+}

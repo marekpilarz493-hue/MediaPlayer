@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "playlist": [
+    {
+      "title": "Film demonstracyjny",
+      "src": "/media/sample.mp4",
+      "sections": [
+        {
+          "title": "Poczatek",
+          "start": 0,
+          "end": 4,
+          "comments": [
+            "Pierwszy przykladowy komentarz."
+          ]
+        },
+        {
+          "title": "Druga czesc",
+          "start": 4,
+          "end": 8,
+          "comments": [
+            "Sekcja jest zaznaczona na osi czasu."
+          ]
+        }
+      ]
+    }
+  ]
+}
